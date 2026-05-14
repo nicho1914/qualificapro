@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Hero from './components/Hero'
 import Intro from './components/Intro'
 import Experience from './components/Experience'
@@ -28,11 +29,14 @@ function LandingPage() {
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<LandingPage />} />
-      <Route path="/privacidade" element={<PrivacyPolicy />} />
-      <Route path="/termos" element={<Terms />} />
-      <Route path="/cookies" element={<CookiePolicy />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/privacidade" element={<PrivacyPolicy />} />
+        <Route path="/termos" element={<Terms />} />
+        <Route path="/cookies" element={<CookiePolicy />} />
+      </Routes>
+      <SpeedInsights />
+    </>
   )
 }
