@@ -25,14 +25,14 @@ export default function Platform() {
             atualizações da Qualifica Pro.
           </p>
           <a
-            href="https://qualificapro.com.br/browse?login=true"
+            href="https://plataforma.qualificapro.com.br/browse"
             className="mt-6 min-h-[62px]
               inline-flex items-center justify-center gap-2
               rounded-xl px-5
               text-[24px] font-medium
               bg-yellow text-black whitespace-nowrap"
           >
-            <PlayDot />
+            <PlayDot variant="platform" />
             Acessar a plataforma
           </a>
         </div>
