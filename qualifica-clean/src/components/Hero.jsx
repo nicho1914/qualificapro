@@ -8,7 +8,7 @@ export default function Hero() {
       className="hero-bg relative overflow-hidden
         min-h-[520px] sm:min-h-[686px] lg:min-h-[917px]
         px-4 sm:px-16 lg:px-20
-        pt-8 sm:pt-8 lg:pt-6
+        pt-24 sm:pt-8 lg:pt-6
         pb-12 sm:pb-20
         flex flex-col gap-12 sm:gap-[71px] lg:gap-[98px]
         justify-start sm:justify-center"
@@ -19,7 +19,7 @@ export default function Hero() {
         <h1
           className="m-0 max-w-[823px]
             text-[40px] sm:text-[64px] lg:text-[96px]
-            font-extrabold leading-none text-ink"
+            font-extrabold leading-none text-ink dark:text-white"
         >
           O centro de treinamento dos profissionais da construção
         </h1>
@@ -49,9 +49,9 @@ export default function Hero() {
               inline-flex items-center justify-center gap-2
               px-4 sm:px-5
               text-[15px] sm:text-[24px] font-medium
-              text-black whitespace-nowrap"
+              text-black dark:text-white whitespace-nowrap"
           >
-            <PlayDot />
+            <PlayDot darkInvert />
             Acessar a plataforma
           </a>
         </div>

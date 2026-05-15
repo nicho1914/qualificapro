@@ -4,15 +4,15 @@ export default function Platform() {
   return (
     <section
       id="plataforma"
-      className="px-4 sm:px-16 lg:px-20 min-h-[370px] sm:min-h-[558px] flex items-center"
+      className="overflow-hidden px-4 sm:px-16 lg:px-20 min-h-[370px] sm:min-h-[558px] flex items-center"
     >
-      <div className="max-w-content mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_700px] items-center gap-8 lg:gap-0">
+      <div className="max-w-content mx-auto w-full grid grid-cols-1 lg:grid-cols-[738px_1fr] items-center gap-8 lg:gap-0">
         {/* Text */}
         <div>
           <h2
             className="m-0 max-w-[739px]
               text-[32px] sm:text-[40px] lg:text-[56px]
-              font-extrabold leading-[1.1] text-ink"
+              font-extrabold leading-[1.1] text-ink dark:text-white"
           >
             Quer acessar conteúdos práticos e receber avisos de novos cursos?
           </h2>
@@ -38,14 +38,12 @@ export default function Platform() {
         </div>
 
         {/* Platform screenshot — hidden on mobile */}
-        <div className="hidden lg:flex items-center justify-end">
-          <div className="w-[700px] h-[513px] overflow-hidden">
-            <img
-              src="/platform-preview.png"
-              alt="Prévia da plataforma Qualifica Pro"
-              className="w-full h-full object-contain"
-            />
-          </div>
+        <div className="hidden lg:flex items-center justify-start">
+          <img
+            src="/platform-preview.png"
+            alt="Prévia da plataforma Qualifica Pro"
+            className="w-[620px] h-auto object-contain"
+          />
         </div>
       </div>
     </section>

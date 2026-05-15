@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom'
+import { useTheme } from '../context/ThemeContext'
 
 export default function Footer() {
+  const { dark } = useTheme()
   return (
     <footer className="px-4 sm:px-16 lg:px-20 py-6">
       <div
@@ -11,7 +13,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <img
-            src="/logo.svg"
+            src={dark ? '/logo branca.svg' : '/logo.svg'}
             alt="Qualifica Pro"
             className="w-[230px] sm:w-[358px]"
           />
@@ -26,23 +28,23 @@ export default function Footer() {
               <img
                 src="/instagram-main.svg"
                 alt=""
-                className="w-[34px] h-[34px]"
+                className="w-[34px] h-[34px] dark:brightness-0 dark:invert"
               />
             </a>
             <a
               href="https://www.facebook.com/qualificapro"
               aria-label="Facebook"
             >
-              <img src="/facebook.svg" alt="" className="w-[34px] h-[34px]" />
+              <img src="/facebook.svg" alt="" className="w-[34px] h-[34px] dark:brightness-0 dark:invert" />
             </a>
             <a
               href="https://www.youtube.com/@QualificaPro"
               aria-label="YouTube"
             >
-              <img src="/youtube.svg" alt="" className="w-[34px] h-[34px]" />
+              <img src="/youtube.svg" alt="" className="w-[34px] h-[34px] dark:brightness-0 dark:invert" />
             </a>
           </div>
-          <p className="mt-[23px] text-base leading-none text-ink">
+          <p className="mt-[23px] text-base leading-none text-ink dark:text-white">
             2026 © Todos os direitos reservados.
             <br />
             Qualifica Pro LTDA
@@ -56,19 +58,19 @@ export default function Footer() {
           </h3>
           <a
             href="#historia"
-            className="block mb-[7px] text-ink text-xl leading-none"
+            className="block mb-[7px] text-ink dark:text-white text-xl leading-none"
           >
             Sobre
           </a>
           <a
             href="#cursos"
-            className="block mb-[7px] text-ink text-xl leading-none"
+            className="block mb-[7px] text-ink dark:text-white text-xl leading-none"
           >
             Cursos
           </a>
           <a
             href="/cadastro"
-            className="block mb-[7px] text-ink text-xl leading-none"
+            className="block mb-[7px] text-ink dark:text-white text-xl leading-none"
           >
             Cadastrar-se
           </a>
@@ -79,13 +81,13 @@ export default function Footer() {
           <h3 className="m-0 mb-[38px] text-yellow text-xl font-semibold leading-none">
             Outros
           </h3>
-          <Link to="/privacidade" className="block mb-[7px] text-ink text-xl leading-none">
+          <Link to="/privacidade" className="block mb-[7px] text-ink dark:text-white text-xl leading-none">
             Política de Privacidade
           </Link>
-          <Link to="/termos" className="block mb-[7px] text-ink text-xl leading-none">
+          <Link to="/termos" className="block mb-[7px] text-ink dark:text-white text-xl leading-none">
             Termos e condições
           </Link>
-          <Link to="/cookies" className="block mb-[7px] text-ink text-xl leading-none">
+          <Link to="/cookies" className="block mb-[7px] text-ink dark:text-white text-xl leading-none">
             Política de Cookies
           </Link>
         </nav>

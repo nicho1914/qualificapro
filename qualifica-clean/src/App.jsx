@@ -13,7 +13,7 @@ import CookiePolicy from './pages/CookiePolicy'
 
 function LandingPage() {
   return (
-    <div className="w-full overflow-x-hidden bg-white text-ink">
+    <div className="w-full overflow-x-hidden bg-white dark:bg-[#111] text-ink dark:text-white">
       <Hero />
       <Intro />
       <Experience />

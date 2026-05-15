@@ -1,18 +1,18 @@
 const courses = [
   {
-    img: 'public/IMG_2507.png',
+    img: '/IMG_2507.JPEG',
     alt: 'Curso presencial de efeito rocha',
     title: 'Efeito Rocha',
     desc: 'Técnica de revestimento que simula texturas naturais de pedra com acabamento profissional.',
   },
   {
-    img: 'public/IMG_7671.png',
+    img: '/IMG_7671.JPEG',
     alt: 'Turma do curso de piso drenante',
     title: 'Piso Drenante',
     desc: 'Execução correta de pisos com alta capacidade de escoamento para áreas externas e descobertas.',
   },
   {
-    img: 'public/IMG_2896.HEIC',
+    img: '/IMG_2892.jpg',
     alt: 'Treinamento sobre umidade ascendente',
     title: 'Umidade Ascendente',
     desc: 'Diagnóstico e tratamento eficaz de umidade que sobe pela base das paredes e estruturas.',
@@ -23,7 +23,7 @@ export default function Courses() {
   return (
     <section id="cursos" className="px-4 sm:px-16 lg:px-20 py-12 text-center">
       <div className="max-w-content mx-auto">
-        <h2 className="m-0 text-[31px] sm:text-[64px] font-extrabold leading-[1.1] text-ink sm:whitespace-nowrap">
+        <h2 className="m-0 text-[31px] sm:text-[64px] font-extrabold leading-[1.1] text-ink dark:text-white sm:whitespace-nowrap">
           Cursos presenciais que já realizamos
         </h2>
         <p className="mt-2 text-muted text-base sm:text-[32px] font-medium leading-[1.1]">
@@ -43,7 +43,7 @@ export default function Courses() {
                 />
               </div>
               <div>
-                <h3 className="m-0 mb-4 text-ink text-[36px] font-extrabold leading-[1.1]">
+                <h3 className="m-0 mb-4 text-ink dark:text-white text-[36px] font-extrabold leading-[1.1]">
                   {course.title}
                 </h3>
                 <p className="m-0 text-muted text-base sm:text-[24px] font-medium leading-[1.1]">

@@ -21,7 +21,7 @@ export default function Intro() {
           <img
             src="/logo horizontal.svg"
             alt="Qualifica Pro"
-            className="relative w-[99px] sm:w-[275px] lg:w-[325px] brightness-0 invert"
+            className="relative w-[99px] sm:w-[275px] lg:w-[325px]"
           />
 
           {/* Text */}

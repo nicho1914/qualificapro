@@ -1,4 +1,4 @@
-function FeatureCard({ src, type = 'img', alt = '', children, large = false }) {
+function FeatureCard({ src, type = 'img', alt = '', poster, children, large = false }) {
   return (
     <article
       className={`card-overlay relative overflow-hidden flex items-end rounded-lg bg-gray-300
@@ -10,6 +10,7 @@ function FeatureCard({ src, type = 'img', alt = '', children, large = false }) {
       {type === 'video' ? (
         <video
           src={src}
+          poster={poster}
           muted
           loop
           autoPlay
@@ -34,7 +35,7 @@ export default function Experience() {
   return (
     <section id="experiencia" className="px-4 sm:px-16 lg:px-20 py-12">
       <div className="max-w-content mx-auto">
-        <h2 className="m-0 text-[31px] sm:text-[64px] font-extrabold leading-[1.1] text-ink">
+        <h2 className="m-0 text-[31px] sm:text-[64px] font-extrabold leading-[1.1] text-ink dark:text-white">
           O que você aprende hoje no Qualifica, você aplica{' '}
           <span className="text-yellow">amanhã</span> na obra.
         </h2>
@@ -45,7 +46,7 @@ export default function Experience() {
 
         <div className="grid gap-4 mt-12">
           {/* Large featured card */}
-          <FeatureCard src="/Image-1.png" alt="Aula presencial do Qualifica Pro" large>
+          <FeatureCard src="/VIDEO-CERTIFICADOS.mp4" type="video" poster="/Image-1.png" alt="Aula presencial do Qualifica Pro" large>
             Certificação e{' '}
             <span className="text-yellow">qualificação</span> para o mercado
           </FeatureCard>
@@ -53,17 +54,19 @@ export default function Experience() {
           {/* FIX: mobile = 1 col (was incorrectly 3 cols), desktop = 3 cols */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-[39px]">
             <FeatureCard
-              src="/VÍDEO ELIEL TÉCNICO.MOV"
+              src="/video_bali_axon.mp4"
               type="video"
+              poster="/Image-1.png"
             >
               Feedback do instrutor
             </FeatureCard>
-            <FeatureCard src="/Image-2.png" alt="Instrutor dando orientação técnica">
+            <FeatureCard src="/video_eliel_curso.mp4" type="video" poster="/Image-1.png" alt="Instrutor dando orientação técnica">
               Orientação técnica
             </FeatureCard>
             <FeatureCard
-              src="/VÍDEO-ALUNA NA PRÁTICA.MOV"
+              src="/video_aluna-na-pratica.mp4"
               type="video"
+              poster="/Image-1.png"
             >
               Aplica na prática
             </FeatureCard>
