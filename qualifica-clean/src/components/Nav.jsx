@@ -32,6 +32,10 @@ function ThemeToggle() {
   )
 }
 
+function scrollTo(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+}
+
 export default function Nav() {
   const [open, setOpen] = useState(false)
   const { dark, toggle } = useTheme()
@@ -71,13 +75,12 @@ export default function Nav() {
 
         {open && (
           <nav className="mt-2 rounded-[20px] bg-[rgba(17,19,24,0.85)] backdrop-blur-[4px] px-5 py-4 flex flex-col gap-1">
-            <a
-              href="#historia"
-              onClick={() => setOpen(false)}
-              className="py-3 text-white text-base font-medium border-b border-white/10"
+            <button
+              onClick={() => { scrollTo('historia'); setOpen(false) }}
+              className="py-3 text-left text-white text-base font-medium border-b border-white/10"
             >
               História
-            </a>
+            </button>
             <a
               href="#cursos"
               onClick={() => setOpen(false)}
@@ -113,12 +116,12 @@ export default function Nav() {
         </a>
         <div className="flex items-center gap-[26px]">
           <ThemeToggle />
-          <a
-            href="#historia"
-            className="min-h-12 inline-flex items-center px-6 rounded-full bg-brand-gray text-brand-white text-base leading-none"
+          <button
+            onClick={() => scrollTo('historia')}
+            className="min-h-12 inline-flex items-center px-6 rounded-full bg-brand-gray text-brand-white text-base leading-none cursor-pointer"
           >
             História
-          </a>
+          </button>
           <a
             href="/cadastro"
             className="min-h-12 inline-flex items-center px-6 rounded-full bg-yellow text-[#050507] text-base leading-none font-medium"

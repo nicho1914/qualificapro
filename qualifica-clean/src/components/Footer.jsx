@@ -1,6 +1,10 @@
 import { Link } from 'react-router-dom'
 import { useTheme } from '../context/ThemeContext'
 
+function scrollTo(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+}
+
 export default function Footer() {
   const { dark } = useTheme()
   return (
@@ -56,20 +60,22 @@ export default function Footer() {
           <h3 className="m-0 mb-[38px] text-yellow text-xl font-semibold leading-none">
             Explore
           </h3>
-          <a
-            href="#historia"
-            className="block mb-[7px] text-ink dark:text-white text-xl leading-none"
+          <button
+            onClick={() => scrollTo('historia')}
+            className="block mb-[7px] text-ink dark:text-white text-xl leading-none text-left"
           >
             Sobre
-          </a>
-          <a
-            href="#cursos"
-            className="block mb-[7px] text-ink dark:text-white text-xl leading-none"
+          </button>
+          <button
+            onClick={() => scrollTo('cursos')}
+            className="block mb-[7px] text-ink dark:text-white text-xl leading-none text-left"
           >
             Cursos
-          </a>
+          </button>
           <a
-            href="/cadastro"
+            href="https://plataforma.qualificapro.com.br/browse?login=true"
+            target="_blank"
+            rel="noopener noreferrer"
             className="block mb-[7px] text-ink dark:text-white text-xl leading-none"
           >
             Cadastrar-se

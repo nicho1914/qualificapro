@@ -44,14 +44,16 @@ export default function Hero() {
             Cadastre-se
           </a>
           <a
-            href="#plataforma"
+            href="https://plataforma.qualificapro.com.br/browse"
+            target="_blank"
+            rel="noopener noreferrer"
             className="min-h-[52px] sm:min-h-[62px]
               inline-flex items-center justify-center gap-2
               px-4 sm:px-5
               text-[15px] sm:text-[24px] font-medium
               text-black dark:text-white whitespace-nowrap"
           >
-            <PlayDot darkInvert />
+            <PlayDot />
             Acessar a plataforma
           </a>
         </div>
