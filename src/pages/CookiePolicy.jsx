@@ -1,32 +1,35 @@
+import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useTheme } from '../context/ThemeContext'
 
 export default function CookiePolicy() {
   const navigate = useNavigate()
+  const { dark } = useTheme()
+
+  useEffect(() => { window.scrollTo(0, 0) }, [])
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-ink">
-      {/* Nav */}
-      <header className="sticky top-0 z-10 bg-white border-b border-gray-100 px-4 sm:px-16 lg:px-20 py-4 flex items-center justify-between">
+    <div className="min-h-screen flex flex-col bg-white dark:bg-[#111] text-ink dark:text-white">
+      <header className="sticky top-0 z-10 bg-white dark:bg-[#111] border-b border-gray-100 dark:border-[#222] px-4 sm:px-16 lg:px-20 py-4 flex items-center justify-between">
         <button
           type="button"
           onClick={() => navigate('/')}
-          className="inline-flex items-center gap-2 text-brand-gray hover:text-ink transition-colors text-base font-medium"
+          className="inline-flex items-center gap-2 text-brand-gray dark:text-[#aaa] hover:text-ink dark:hover:text-white transition-colors text-base font-medium"
         >
           <span aria-hidden="true">←</span> Voltar
         </button>
         <a href="/#/">
-          <img src="/logo.svg" alt="Qualifica Pro" className="h-8 w-auto" />
+          <img src={dark ? '/logo branca.svg' : '/logo.svg'} alt="Qualifica Pro" className="h-8 w-auto" />
         </a>
       </header>
 
-      {/* Conteúdo */}
       <main className="flex-1 px-4 sm:px-16 lg:px-20 py-12 max-w-[860px] mx-auto w-full">
-        <h1 className="text-[32px] sm:text-[48px] font-extrabold leading-tight text-ink mb-2">
+        <h1 className="text-[32px] sm:text-[48px] font-extrabold leading-tight mb-2">
           Política de Cookies
         </h1>
         <p className="text-muted text-sm mb-10">Última atualização: maio de 2026</p>
 
-        <div className="space-y-8 text-base sm:text-lg leading-relaxed text-ink">
+        <div className="space-y-8 text-base sm:text-lg leading-relaxed">
           <section>
             <h2 className="text-xl sm:text-2xl font-bold mb-3">1. O que são cookies?</h2>
             <p>
@@ -47,21 +50,20 @@ export default function CookiePolicy() {
 
           <section>
             <h2 className="text-xl sm:text-2xl font-bold mb-3">3. Tipos de cookies que usamos</h2>
-
             <div className="mt-3 space-y-4">
-              <div className="border border-gray-100 rounded-xl p-4">
+              <div className="border border-gray-100 dark:border-[#333] rounded-xl p-4">
                 <h3 className="font-bold mb-1">🔒 Cookies essenciais</h3>
                 <p className="text-muted text-sm">
                   Necessários para o funcionamento básico do site. Sem eles, algumas partes do site não funcionarão corretamente. Não podem ser desativados.
                 </p>
               </div>
-              <div className="border border-gray-100 rounded-xl p-4">
+              <div className="border border-gray-100 dark:border-[#333] rounded-xl p-4">
                 <h3 className="font-bold mb-1">📊 Cookies de analytics</h3>
                 <p className="text-muted text-sm">
                   Coletam informações sobre como você usa o site (páginas visitadas, tempo de permanência) para nos ajudar a melhorá-lo. Nenhum dado pessoal identificável é coletado.
                 </p>
               </div>
-              <div className="border border-gray-100 rounded-xl p-4">
+              <div className="border border-gray-100 dark:border-[#333] rounded-xl p-4">
                 <h3 className="font-bold mb-1">🎯 Cookies de marketing</h3>
                 <p className="text-muted text-sm">
                   Utilizados para exibir anúncios relevantes com base nos seus interesses. Podem ser compartilhados com parceiros de publicidade.
@@ -110,8 +112,7 @@ export default function CookiePolicy() {
         </div>
       </main>
 
-      {/* Footer mínimo */}
-      <footer className="px-4 sm:px-16 lg:px-20 py-6 border-t border-gray-100 text-center text-muted text-sm">
+      <footer className="px-4 sm:px-16 lg:px-20 py-6 border-t border-gray-100 dark:border-[#222] text-center text-muted text-sm">
         2026 © Todos os direitos reservados. Qualifica Pro LTDA
       </footer>
     </div>

@@ -10,7 +10,7 @@ export default function Intro() {
             min-h-[200px] sm:min-h-[401px]
             px-[11px] sm:px-10
             py-[25px] sm:py-20
-            rounded-[0_0_25px_25px] sm:rounded-[25px]
+            rounded-[25px]
             text-white"
           style={{
             background:
@@ -21,7 +21,7 @@ export default function Intro() {
           <img
             src="/logo horizontal.svg"
             alt="Qualifica Pro"
-            className="relative w-[99px] sm:w-[275px] lg:w-[325px] brightness-0 invert"
+            className="relative w-[99px] sm:w-[275px] lg:w-[325px]"
           />
 
           {/* Text */}

@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/cadastro",
+      "destination": "https://plataforma.qualificapro.com.br/browse?login=true",
+      "permanent": false
+    },
+    {
+      "source": "/piso-drenante-drystore",
+      "destination": "https://plataforma.qualificapro.com.br/g/curso-de-piso-drenante-drystore/about",
+      "permanent": false
+    }
+
+  ]
+}

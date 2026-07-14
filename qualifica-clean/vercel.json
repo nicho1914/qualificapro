@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "/cadastro",
-      "destination": "https://plataforma.qualificapro.com.br/browse?login=true",
-      "permanent": false
-    }
-  ]
-}

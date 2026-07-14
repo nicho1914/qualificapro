@@ -1,7 +1,19 @@
-export default function PlayDot() {
+import playCircle from '../assets/play-circle.svg'
+
+// hero:     preto no light, branco no dark → brightness-0 dark:invert
+// platform: preto sempre                  → brightness-0
+export default function PlayDot({ variant = 'hero' }) {
+  const filter =
+    variant === 'platform'
+      ? 'brightness-0'
+      : 'brightness-0 dark:invert'
+
   return (
-    <span className="inline-grid place-items-center w-[18px] h-[18px] rounded-full bg-black shrink-0">
-      <span className="play-triangle-sm" />
-    </span>
+    <img
+      src={playCircle}
+      alt=""
+      aria-hidden="true"
+      className={`w-6 h-6 shrink-0 ${filter}`}
+    />
   )
 }
