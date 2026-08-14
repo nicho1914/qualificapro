@@ -17,6 +17,10 @@
       "destination": "https://landing-concrete.vercel.app"
     },
     {
+      "source": "/concrete-show/",
+      "destination": "https://landing-concrete.vercel.app"
+    },
+    {
       "source": "/concrete-show/:path*",
       "destination": "https://landing-concrete.vercel.app/:path*"
     }
