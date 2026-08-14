@@ -10,6 +10,15 @@
       "destination": "https://plataforma.qualificapro.com.br/g/curso-de-piso-drenante-drystore/about",
       "permanent": false
     }
-
+  ],
+  "rewrites": [
+    {
+      "source": "/concrete-show",
+      "destination": "https://landing-concrete.vercel.app/concrete-show"
+    },
+    {
+      "source": "/concrete-show/:path*",
+      "destination": "https://landing-concrete.vercel.app/concrete-show/:path*"
+    }
   ]
 }
